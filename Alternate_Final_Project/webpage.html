@@ -147,6 +147,34 @@
             text-align: center;
         }
 
+        .overlay-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            z-index: 1000;
+        }
+
+        .overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            max-height: 80%;
+            overflow: auto;
+        }
+
+        .container {
+            margin: 0 10%;
+        }
+
         .masonry-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(calc((100% - 40px) / 3), 1fr));
@@ -159,6 +187,8 @@
             text-align: center;
             line-height: 150px;
             border-radius: 10px;
+            cursor: pointer;
+            position: relative;
         }
 
         .large-box {
@@ -342,7 +372,7 @@
                 <a href="#header-section">Home</a>
                 <a href="#intro-section">Intro</a>
                 <a href="#eda-section">Analysis</a>
-                <a href="#team-section">Team</a>
+                <a href="#team-section">Results</a>
             </nav>
         </header>
     
@@ -353,7 +383,7 @@
         </section>
     
         <div class="abstract-section" id="intro-section">
-            <h1>Introduction</h1>
+
             <div class="rectangular-box">
                 <p>
                     Logistic Regression is a statistical method used for binary and multiclass classification. Despite its name, 
@@ -387,8 +417,9 @@ This function always yields an output between 0 and 1 and the resultant curve wo
             </div>
             
             <div class="big-image-container">
-                <img src="Alternate_Final_Project/Visualizations/binary.png" alt="Bigs Image">
+                <img src="C:\Users\shiri\Downloads\sigmoid_example.png" alt="Big Image">
             </div>
+
             <div class="rectangular-box">
                 <p>
                     <h2>Example: Predicting Basketball Game Outcome </h2><br><br>
@@ -436,20 +467,94 @@ This function always yields an output between 0 and 1 and the resultant curve wo
             
         </div>
 
-        <section class="eda-section" id="eda-section">
-            <h1>Exploratory Data Analysis</h1>
-            <div style="height: 5em;"></div>
-            <div class="masonry-grid">
-                <div class="box large-box">Summary Statistics</div>
-                <div class="box small-box">Outliers</div>
-                <div class="box small-box">Feature Engineering</div>
-                <div class="box small-box">Data Visualization</div>
-                <div class="box large-box">Correlation Analysis</div>
-                <div class="box small-box">Hypothesis Testing</div>
-                <div class="box small-box">Statistical Analysis</div>
-            </div>
-        </section>
-
+        <div class="container">
+            <!-- Your existing content -->
+    
+            <section class="eda-section" id="eda-section">
+                <h1>Exploratory Data Analysis</h1>
+                <div style="height: 5em;"></div>
+                <div class="masonry-grid">
+                    <div class="box large-box" onclick="toggleOverlay('overlay1')">Summary Statistics</div>
+                    <div class="box small-box" onclick="toggleOverlay('overlay2')">Distribution of Income</div>
+                    <div class="box small-box" onclick="toggleOverlay('overlay3')">Age vs Income</div>
+                    <div class="box small-box" onclick="toggleOverlay('overlay4')">Workclass vs Income</div>
+                    <div class="box large-box" onclick="toggleOverlay('overlay5')">Education vs Income</div>
+                    <div class="box small-box" onclick="toggleOverlay('overlay6')">Age vs Income</div>
+                    <div class="box small-box" onclick="toggleOverlay('overlay7')">Occupation vs Income</div>
+                </div>
+    
+                <!-- Overlay containers -->
+                <div class="overlay-container" id="overlay1" onclick="toggleOverlay('overlay1')">
+                    <!-- Overlay content for Summary Statistics -->
+                    <div class="overlay-content">
+                        <img src="https://github.com/Shirisha-18/Data_Mining/blob/main/Alternate_Final_Project/Visualizations/binary.png" alt="Image 1" style="max-width: 100%; border-radius: 10px;">
+                        <div style="margin-top: 10px;">
+                            <p>Overlay content for Summary Statistics goes here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overlay-container" id="overlay2" onclick="toggleOverlay('overlay2')">
+                    <!-- Overlay content for Outliers -->
+                    <div class="overlay-content">
+                        <img src="image2.jpg" alt="Image 2" style="max-width: 100%; border-radius: 10px;">
+                        <div style="margin-top: 10px;">
+                            <p>Overlay content for Outliers goes here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overlay-container" id="overlay3" onclick="toggleOverlay('overlay3')">
+                    <!-- Overlay content for Feature Engineering -->
+                    <div class="overlay-content">
+                        <img src="image3.jpg" alt="Image 3" style="max-width: 100%; border-radius: 10px;">
+                        <div style="margin-top: 10px;">
+                            <p>Overlay content for Feature Engineering goes here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overlay-container" id="overlay4" onclick="toggleOverlay('overlay4')">
+                    <!-- Overlay content for Data Visualization -->
+                    <div class="overlay-content">
+                        <img src="image4.jpg" alt="Image 4" style="max-width: 100%; border-radius: 10px;">
+                        <div style="margin-top: 10px;">
+                            <p>Overlay content for Data Visualization goes here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overlay-container" id="overlay5" onclick="toggleOverlay('overlay5')">
+                    <!-- Overlay content for Correlation Analysis -->
+                    <div class="overlay-content">
+                        <img src="image5.jpg" alt="Image 5" style="max-width: 100%; border-radius: 10px;">
+                        <div style="margin-top: 10px;">
+                            <p>Overlay content for Correlation Analysis goes here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overlay-container" id="overlay6" onclick="toggleOverlay('overlay6')">
+                    <!-- Overlay content for Hypothesis Testing -->
+                    <div class="overlay-content">
+                        <img src="image6.jpg" alt="Image 6" style="max-width: 100%; border-radius: 10px;">
+                        <div style="margin-top: 10px;">
+                            <p>Overlay content for Hypothesis Testing goes here</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overlay-container" id="overlay7" onclick="toggleOverlay('overlay7')">
+                    <!-- Overlay content for Statistical Analysis -->
+                    <div class="overlay-content">
+                        <img src="image7.jpg" alt="Image 7" style="max-width: 100%; border-radius: 10px;">
+                        <div style="margin-top: 10px;">
+                            <p>Overlay content for Statistical Analysis goes here</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
         <div class="model-section">
             <h1>Model Development</h1>
             <div class="big-image-container">
@@ -517,6 +622,11 @@ This function always yields an output between 0 and 1 and the resultant curve wo
                 // Update the image source for Ordinal
                 imageContent.innerHTML = '<img src="ordinal_image.jpg" alt="Ordinal Image">';
             }
+        }
+
+        function toggleOverlay(overlayId) {
+            var overlay = document.getElementById(overlayId);
+            overlay.style.display = (overlay.style.display === "block") ? "none" : "block";
         }
     </script>
         
