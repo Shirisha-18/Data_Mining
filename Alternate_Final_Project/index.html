@@ -476,7 +476,7 @@
                     <div class="box small-box" onclick="toggleOverlay('overlay3')">Age vs Income</div>
                     <div class="box small-box" onclick="toggleOverlay('overlay4')">Workclass vs Income</div>
                     <div class="box large-box" onclick="toggleOverlay('overlay5')">Education vs Income</div>
-                    <div class="box small-box" onclick="toggleOverlay('overlay6')">Age vs Income</div>
+                    <div class="box small-box" onclick="toggleOverlay('overlay6')">Cumulative Explained Components</div>
                     <div class="box small-box" onclick="toggleOverlay('overlay7')">Occupation vs Income</div>
                 </div>
     
@@ -486,7 +486,7 @@
                     <div class="overlay-content">
                         <img src="./Visualizations/numerical_features.png" alt="Image 1" style="max-width: 100%; border-radius: 10px;">
                         <div style="margin-top: 10px;">
-                            <p>Overlay content for Summary Statistics goes here</p>
+                            <p>The distribution of various numerical features is shown here. We can observe that most of the people belong to the age group between 20-60 years.</p>
                         </div>
                     </div>
                 </div>
@@ -496,7 +496,7 @@
                     <div class="overlay-content">
                         <img src="./Visualizations/Distribution_of_income.png" alt="Image 2" style="max-width: 100%; border-radius: 10px;">
                         <div style="margin-top: 10px;">
-                            <p>Overlay content for Outliers goes here</p>
+                            <p>More than half of the adults have income less than 50000.</p>
                         </div>
                     </div>
                 </div>
@@ -506,7 +506,7 @@
                     <div class="overlay-content">
                         <img src="./Visualizations/age_vs_income.png" alt="Image 3" style="max-width: 100%; border-radius: 10px;">
                         <div style="margin-top: 10px;">
-                            <p>Overlay content for Feature Engineering goes here</p>
+                            <p>There is a positive correlation between age and income. This means that as people get older, their income tends to increase. There is a lot of variation in how much people earn, even at the same age. This could be due to factors such as education, occupation, location, and experience.</p>
                         </div>
                     </div>
                 </div>
@@ -516,7 +516,7 @@
                     <div class="overlay-content">
                         <img src="./Visualizations/workclass_vs_income.png" alt="Image 4" style="max-width: 100%; border-radius: 10px;">
                         <div style="margin-top: 10px;">
-                            <p>Overlay content for Data Visualization goes here</p>
+                            <p>There is a positive correlation between workclass and income. People who work in private sector jobs tend to have higher incomes than people who work in government jobs or are self-employed. </p>
                         </div>
                     </div>
                 </div>
@@ -526,7 +526,7 @@
                     <div class="overlay-content">
                         <img src="./Visualizations/education_vs_income.png" alt="Image 5" style="max-width: 100%; border-radius: 10px;">
                         <div style="margin-top: 10px;">
-                            <p>Overlay content for Correlation Analysis goes here</p>
+                            <p>There is a positive correlation between education level and income. People with higher levels of education tend to earn more money than people with lower levels of education. </p>
                         </div>
                     </div>
                 </div>
@@ -536,7 +536,7 @@
                     <div class="overlay-content">
                         <img src="./Visualizations/cumulative_components.png" alt="Image 6" style="max-width: 100%; border-radius: 10px;">
                         <div style="margin-top: 10px;">
-                            <p>Overlay content for Hypothesis Testing goes here</p>
+                            <p>The above plot shows that almost 90% of the variance is explained by the first 12 components.</p>
                         </div>
                     </div>
                 </div>
@@ -546,7 +546,7 @@
                     <div class="overlay-content">
                         <img src="./Visualizations/occupation_vs_income.png" alt="Image 7" style="max-width: 100%; border-radius: 10px;">
                         <div style="margin-top: 10px;">
-                            <p>Overlay content for Statistical Analysis goes here</p>
+                            <p> People who work in certain occupations, such as professional specialties and executive managerial positions, tend to earn more money than people who work in other occupations, such as handlers, cleaners, and protective service workers. </p>
                         </div>
                     </div>
                 </div>
@@ -611,7 +611,7 @@
                 title.innerText = "Binary logistic regression";
                 content.innerText = "Binary logistic regression is used to predict the probability of a binary outcome, such as yes or no, true or false, or 0 or 1. For example, it could be used to predict whether a customer will churn or not, whether a patient has a disease or not, or whether a loan will be repaid or not.";
                 // Update the image source for Binary
-                imageContent.innerHTML = '<img src="./Visualizations/binarypng" alt="Binary Image">';
+                imageContent.innerHTML = '<img src="./Visualizations/binary.png" alt="Binary Image">';
             } else if (memberNumber === 2) {
                 title.innerText = "Multinomial logistic regression";
                 content.innerText = "Multinomial logistic regression is used to predict the probability of one of three or more possible outcomes, such as the type of product a customer will buy, the rating a customer will give a product, or the political party a person will vote for.";
